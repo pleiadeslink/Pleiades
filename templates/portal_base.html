@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static "portal_style.css" %}">
+        <title>pleiades.link</title>
+    </head>
+    <body>
+        
+        <div class="global-container">
+            <div class="main-container">
+                
+                <img class="header-image" src="{% static "portal_header.png" %}" />
+                <div class="main-title">pleiades.link</div>
+                <ul class="nav">
+                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                    <li><a href="{% url 'resources' %}">Resources</a></li>
+                    <li><a href="{% url 'blog' %}">About</a></li>
+                    <li><a href="{% url 'blog' %}">Links</a></li>
+                </ul>
+                {% block content %} 
+                <!-- Content Goes here -->
+                {% endblock content %}
+                <div class="footer">This website respects your privacy and does not track you.<br/>Bitcoin: bc1qdr6jmkn5gq5k5ns6tgnav2delw0v98cmaxyqex</div>
+            </div>
+        </div>
+    </body>
+</html>

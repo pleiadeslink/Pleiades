@@ -1,0 +1,214 @@
+body {
+    padding: 16px;
+    font-family: "Tahoma", "Geneva", sans-serif;
+    font-size: 15px;
+    word-wrap: break-word;
+    color: rgb(206, 206, 206);
+    background-color: rgb(27, 27, 27);
+
+}
+
+a, a:visited {
+    color: rgb(121, 188, 214);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.global-container {
+    text-align: center;
+}
+
+.main-container {
+    text-align: left;
+    display: inline-block;
+    width: 1000px;
+    background-color: rgb(39, 39, 39);
+    border: 2px solid #000000;
+    -webkit-box-shadow: 4px 4px 30px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 30px -7px rgba(0,0,0,0.75);
+    box-shadow: 4px 4px 30px -7px rgba(0,0,0,0.75);
+}
+
+.header-image {
+    border-bottom: 2px solid #000000;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 60px;
+    text-shadow: 0.06rem 0 0.06rem #ea36af, -0.125rem 0 0.06rem #75fa69;
+    padding: 8px;
+    animation-duration: 0.01s;
+    animation-name: textflicker;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    font-family: "Verdana", sans-serif;
+}
+
+@keyframes textflicker {
+    from {
+      text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+    }
+    to {
+      text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+    }
+}
+
+.nav {
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+
+.nav li {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+    text-decoration:none;
+    padding: 4px;
+}
+
+.nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+  
+.nav a::after {
+    content: "";
+    background: white;
+    mix-blend-mode: exclusion;
+    width: calc(100% + 20px);
+    height: 0;
+    position: absolute;
+    bottom: -4px;
+    left: -10px;
+    transition: all .1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+  
+.nav a:hover::after {
+    height: calc(100% + 8px)
+}
+
+.post-container {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+.post-title-container {
+    padding: 11px;
+    background-color: rgb(53, 53, 53);
+    border: 1px solid #1b1b1b;
+}
+
+.comment-container {
+    padding: 11px;
+    padding-bottom: 0px;
+    background-color: rgb(61, 61, 61);
+    margin-top: 16px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border: 1px solid #272727;
+}
+
+.comment-name {
+    font-weight: bold;
+    color: rgb(221, 221, 221);
+    font-size: 14px;
+    text-shadow: 1px 1px 1px #000000;
+    float: left;
+}
+
+.comment-date {
+    color: rgb(187, 187, 187);
+    font-size: 11px;
+    float: right;
+}
+
+.comment-content {
+    padding-top: 4px;
+}
+
+.post-title {
+    font-weight: bold;
+    color: rgb(221, 221, 221);
+    font-size: 16px;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+.post-date {
+    color: rgb(187, 187, 187);
+    font-size: 12px;
+    padding-top: 6px;
+}
+
+.post-content {
+    padding-top: 12px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 16px;
+    color: rgb(196, 196, 196);
+}
+
+.post-back-general-link {
+    padding-bottom: 12px;
+    font-size: 12px;
+}
+
+.footer {
+    padding-bottom: 16px;
+    color: rgb(179, 179, 179);
+    font-size: 11px;
+    text-align: center;
+}
+
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+    border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+form {
+    margin: 0;
+    padding: 8px;
+}
+
+#textarea-mini {
+    box-sizing:border-box;
+    width: 100%;
+    padding: 4px;
+    margin: 2px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-family: "Tahoma", "Geneva", sans-serif;
+    font-size: 15px;
+    word-wrap: break-word;
+    background-color: rgb(92, 92, 92);
+    color: rgb(231, 231, 231);
+    outline: none;
+    border: 0;
+}
+
+.submit-comment-button {
+    text-align: center;
+    padding-top: 8px;
+}

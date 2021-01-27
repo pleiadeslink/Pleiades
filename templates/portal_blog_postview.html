@@ -1,0 +1,42 @@
+{% extends "portal_base.html" %}
+{% load static %}
+<div 
+{% block content %}
+    <div class="post-container">
+        <div class="post-back-general-link"><a href="{% url 'blog'  %}">← Back to general view</a></div>
+        <div class="post-title-container">
+            <div class="post-title">{{post.title}}</div>
+            <div class="post-date">{{ post.created_on}} | Tags: meta</div>
+        </div>
+        <div class="post-content">{{post.content|safe}}</div>
+
+        <div class="post-title-container">
+            <div class="post-title">Comments: {{ comments|length }}</div>
+            {% for comment in comments %}
+                <div class="comment-container">
+                    <div class="comment-name">{{ comment.name }}</div>
+                    <div class="comment-date">{{ comment.created_on }}</div><br />
+                    <div class="comment-content">{{ comment.body | linebreaks }}</div>
+                </div>
+            {% endfor %}
+        </div>
+        <br />
+        <div class="post-title-container">
+            {% if new_comment %}
+                    <div class="alert alert-success" role="alert">Your comment is awaiting moderation.</div>
+            {% else %}
+                <div class="post-title">Leave a comment</div>
+                <form method="post">
+                    {% csrf_token %}
+                    <input type='text' name='name' placeholder="Name" id="textarea-mini">
+                    <input type='email' name='email' placeholder="Email" id="textarea-mini">
+                    <textarea rows="4" name='body' placeholder="Comment" id="textarea-mini"></textarea>
+                    <div class="submit-comment-button"><button type="submit">Submit</button></div>
+                </form>
+            {% endif %}
+        </div>
+
+
+
+    </div>
+{% endblock %}
