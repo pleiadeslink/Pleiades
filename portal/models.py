@@ -6,6 +6,18 @@ STATUS = (
     (1,"Publish")
 )
 
+class Category(models.Model):
+    title = models.CharField(max_length=255, verbose_name="Title")
+    slug = models.SlugField(max_length=200, unique=True)
+
+    class Meta:
+        verbose_name = "Category"
+        verbose_name_plural = "Categories"
+        ordering = ['title']
+
+    def __str__(self):
+        return self.title
+
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
@@ -13,6 +25,7 @@ class Post(models.Model):
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
+    tags = models.ManyToManyField(Category)
 
     class Meta:
         ordering = ['-created_on']

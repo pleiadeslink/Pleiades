@@ -167,9 +167,15 @@ p {
     color: rgb(196, 196, 196);
 }
 
-.post-back-general-link {
+.post-left-link {
     padding-bottom: 12px;
     font-size: 12px;
+}
+
+.post-right-link {
+    padding-bottom: 12px;
+    font-size: 12px;
+    text-align: right;
 }
 
 .footer {
@@ -196,6 +202,7 @@ form {
     box-sizing:border-box;
     width: 100%;
     padding: 4px;
+    padding-left: 6px;
     margin: 2px;
     margin-top: 6px;
     margin-bottom: 6px;

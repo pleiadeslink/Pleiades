@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
-from .models import Post, Resource
+from .models import Post, Resource, Category
 from .forms import CommentForm
 
 class BlogView(generic.ListView):
@@ -35,3 +35,15 @@ def PostView(request, slug):
                                            'comments': comments,
                                            'new_comment': new_comment,
                                            'comment_form': comment_form})
+
+def TagView(request, slug):
+    tag = get_object_or_404(Category, slug=slug)
+    posts = Post.objects.filter(tags__in=[tag]).order_by('-created_on')
+    return render(request, 'portal_blog_categoryview.html', {'tag': tag, 'posts': posts})
+
+def PostListView(request):
+    posts = Post.objects.all().order_by('-created_on')
+    return render(request, 'portal_blog_postlist.html', {'posts': posts})
+
+def LinksView(request):
+    return render(request, 'portal_links.html')

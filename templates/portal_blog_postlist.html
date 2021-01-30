@@ -1,0 +1,15 @@
+{% extends "portal_base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="post-container">
+        <div class="post-title-container">
+            <div class="post-title">Post list</i></div>
+        </div>
+        <div class="post-content">
+            {% for post in posts %}
+                {{post.created_on}} - <a href="{% url 'post_view' post.slug  %}">{{post.title}}</a><br/>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

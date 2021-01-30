@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Resource, Comment
+from .models import Post, Resource, Comment, Category
 
 class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'slug', 'status','created_on')
@@ -25,3 +25,5 @@ class CommentAdmin(admin.ModelAdmin):
         queryset.update(active=True)
 
 admin.site.register(Comment, CommentAdmin)
+
+admin.site.register(Category)
