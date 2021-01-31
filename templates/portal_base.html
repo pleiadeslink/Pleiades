@@ -16,14 +16,12 @@
                 <div class="main-title">pleiades.link</div>
                 <ul class="nav">
                     <li><a href="{% url 'blog' %}">Blog</a></li>
-                    <li><a href="{% url 'resources' %}">Resources</a></li>
-                    <li><a href="{% url 'blog' %}">About</a></li>
-                    <li><a href="{% url 'blog' %}">Links</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
                 </ul>
                 {% block content %} 
                 <!-- Content Goes here -->
                 {% endblock content %}
-                <div class="footer">This website respects your privacy and does not track you.<br/>Bitcoin: bc1qdr6jmkn5gq5k5ns6tgnav2delw0v98cmaxyqex</div>
+                <div class="footer">This website respects your privacy and does not track you<br /><a href="https://m.do.co/c/6e3850773694" target="_blank">Get $100 in credit at Digital Ocean</a><br/>Bitcoin: bc1qdr6jmkn5gq5k5ns6tgnav2delw0v98cmaxyqex</div>
             </div>
         </div>
     </body>

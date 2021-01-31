@@ -8,4 +8,6 @@ urlpatterns = [
     path('resources/', views.ResourceView, name='resources'),
     path('tag/<slug:slug>/', views.TagView, name='tag_view'),
     path('posts/', views.PostListView, name='postlist'),
+    path('about/', views.AboutView, name='about'),
+    path('links/', views.LinksView, name='links'),
 ]

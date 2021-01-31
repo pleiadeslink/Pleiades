@@ -45,5 +45,8 @@ def PostListView(request):
     posts = Post.objects.all().order_by('-created_on')
     return render(request, 'portal_blog_postlist.html', {'posts': posts})
 
+def AboutView(request):
+    return render(request, 'portal_about.html')
+
 def LinksView(request):
     return render(request, 'portal_links.html')

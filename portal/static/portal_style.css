@@ -138,7 +138,7 @@ p {
 
 .comment-date {
     color: rgb(187, 187, 187);
-    font-size: 11px;
+    font-size: 12px;
     float: right;
 }
 
@@ -149,32 +149,35 @@ p {
 .post-title {
     font-weight: bold;
     color: rgb(221, 221, 221);
-    font-size: 16px;
+    font-size: 18px;
     text-shadow: 1px 1px 1px #000000;
 }
 
 .post-date {
     color: rgb(187, 187, 187);
-    font-size: 12px;
+    font-size: 13px;
     padding-top: 6px;
 }
 
 .post-content {
     padding-top: 12px;
-    padding-left: 4px;
-    padding-right: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
     padding-bottom: 16px;
-    color: rgb(196, 196, 196);
+    color: rgb(216, 216, 216);
+    line-height: 135%;
+    letter-spacing: 0.5px;
+    font-size: 15.5px;
 }
 
 .post-left-link {
     padding-bottom: 12px;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .post-right-link {
     padding-bottom: 12px;
-    font-size: 12px;
+    font-size: 13px;
     text-align: right;
 }
 

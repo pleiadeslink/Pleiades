@@ -1,3 +1,7 @@
+# 0.3
+- Meta tags added
+- Minor style fixes
+
 # 0.2
 - Tags added
 
