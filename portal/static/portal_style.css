@@ -149,22 +149,22 @@ p {
 .post-title {
     font-weight: bold;
     color: rgb(221, 221, 221);
-    font-size: 18px;
+    font-size: 20px;
     text-shadow: 1px 1px 1px #000000;
 }
 
 .post-date {
     color: rgb(187, 187, 187);
-    font-size: 13px;
+    font-size: 14px;
     padding-top: 6px;
 }
 
 .post-content {
     padding-top: 12px;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 4px;
+    padding-right: 4px;
     padding-bottom: 16px;
-    color: rgb(216, 216, 216);
+    color: rgb(212, 212, 212);
     line-height: 135%;
     letter-spacing: 0.5px;
     font-size: 15.5px;
@@ -201,7 +201,7 @@ form {
     padding: 8px;
 }
 
-#textarea-mini {
+#textarea-mini, #input {
     box-sizing:border-box;
     width: 100%;
     padding: 4px;
@@ -221,4 +221,10 @@ form {
 .submit-comment-button {
     text-align: center;
     padding-top: 8px;
+}
+
+pre {
+    padding: 16px;
+    font-size: 15px;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }

@@ -1,6 +1,7 @@
 {% extends "portal_base.html" %}
 {% load static %}
-<div 
+{% load markdownify %}
+<div >
 {% block content %}
     <div class="post-container">
         <div class="post-left-link"><a href="{% url 'blog'  %}">🡐 Back to general view</a></div>
@@ -12,7 +13,7 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="post-content">{{post.content|safe}}</div><br />
+        <div class="post-content">{{ post.content | markdown | safe }}</div><br />
 
         {% if comments %}
             <div class="post-title-container">
@@ -38,6 +39,7 @@
                     <input type='text' name='name' placeholder="Name" id="textarea-mini">
                     <input type='email' name='email' placeholder="Email" id="textarea-mini">
                     <textarea rows="4" name='body' placeholder="Comment" id="textarea-mini"></textarea>
+                    <center>{{ comment_form.captcha }}</center>
                     <div class="submit-comment-button"><button type="submit">Submit</button></div>
                 </form>
             {% endif %}

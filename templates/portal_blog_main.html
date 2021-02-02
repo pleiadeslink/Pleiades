@@ -1,5 +1,6 @@
 {% extends "portal_base.html" %}
 {% load static %}
+{% load markdownify %}
 
 {% block content %}
     {% for post in posts %}
@@ -13,7 +14,7 @@
                     {% endfor %}
                 </div>
             </div>
-            <div class="post-content">{{post.content|safe}}</div>
+            <div class="post-content">{{ post.content|markdown|safe }}</div>
         </div>
     {% endfor %}
 {% endblock %}

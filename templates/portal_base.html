@@ -5,10 +5,16 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="{% static "portal_style.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "native.css" %}">
+        <link rel="icon" type="image/png" href="{% static "favicon.png" %}"/>
+        <meta property="og:title" content="pleiades.link">
+        <meta property="og:description" content="A personal website">
+        <meta property="og:image" content="{% static "favicon.png" %}">
+        <meta property="og:url" content="https://pleiades.link">
+        <meta name="twitter:card" content="summary_large_image">
         <title>pleiades.link</title>
     </head>
     <body>
-        
         <div class="global-container">
             <div class="main-container">
                 <div class="parallax"></div>
@@ -21,7 +27,7 @@
                 {% block content %} 
                 <!-- Content Goes here -->
                 {% endblock content %}
-                <div class="footer">This website respects your privacy and does not track you<br /><a href="https://m.do.co/c/6e3850773694" target="_blank">Get $100 in credit at Digital Ocean</a><br/>Bitcoin: bc1qdr6jmkn5gq5k5ns6tgnav2delw0v98cmaxyqex</div>
+                <div class="footer">Header image by <a href="https://www.deviantart.com/norma2d/" target="_blank">Norma2D</a></br>This website respects your privacy and does not track you<br /><a href="https://m.do.co/c/6e3850773694" target="_blank">Get $100 in credit at Digital Ocean</a><br/>Bitcoin: bc1qdr6jmkn5gq5k5ns6tgnav2delw0v98cmaxyqex</div>
             </div>
         </div>
     </body>

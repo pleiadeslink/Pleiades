@@ -1,3 +1,6 @@
+# 0.4
+- Syntax highlighting
+
 # 0.3
 - Meta tags added
 - Minor style fixes
