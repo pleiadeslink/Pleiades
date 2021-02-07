@@ -1,3 +1,6 @@
+# 0.5
+- RSS
+
 # 0.4
 - Syntax highlighting
 

@@ -3,9 +3,9 @@
 {% load markdownify %}
 
 {% block content %}
+    <div class="post-right-link"><a href="{% url 'postlist'  %}">Go to post list 🡒</a></div>
     {% for post in posts %}
         <div class="post-container">
-            <div class="post-right-link"><a href="{% url 'postlist'  %}">Go to post list 🡒</a></div>
             <div class="post-title-container">
                 <div class="post-title"><a href="{% url 'post_view' post.slug  %}">{{post.title}}</a></div>
                 <div class="post-date">{{ post.created_on}} | <a href="{% url 'post_view' post.slug  %}">0 comments</a> | Tags: 

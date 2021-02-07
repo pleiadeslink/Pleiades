@@ -27,6 +27,7 @@ p {
 }
 
 .main-container {
+    position: relative;
     text-align: left;
     display: inline-block;
     width: 1000px;
@@ -105,7 +106,7 @@ p {
 }
 
 .post-container {
-    margin-top: 16px;
+    margin-top: 8px;
     margin-bottom: 16px;
     margin-left: 32px;
     margin-right: 32px;
@@ -171,12 +172,15 @@ p {
 }
 
 .post-left-link {
-    padding-bottom: 12px;
+    padding-top: 8px;
+    padding-left: 32px;
     font-size: 13px;
+    text-align: left;
 }
 
 .post-right-link {
-    padding-bottom: 12px;
+    padding-top: 8px;
+    padding-right: 32px;
     font-size: 13px;
     text-align: right;
 }
@@ -192,8 +196,8 @@ p {
 input:focus, textarea:focus, select:focus{
     outline: none;
     border-color: inherit;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 form {
@@ -224,7 +228,20 @@ form {
 }
 
 pre {
-    padding: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
     font-size: 15px;
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+.rss {
+    position:absolute;
+    top: 212px;
+    right: 12px;
+}
+
+.rss img {
+    padding-left: 12px;
 }

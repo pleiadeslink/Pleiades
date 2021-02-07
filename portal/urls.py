@@ -1,6 +1,7 @@
 from . import views
 from django.conf.urls import url, include
 from django.urls import path
+from .feeds import blogFeed 
 
 urlpatterns = [
     path('', views.BlogView.as_view(), name='blog'),
@@ -10,4 +11,5 @@ urlpatterns = [
     path('posts/', views.PostListView, name='postlist'),
     path('about/', views.AboutView, name='about'),
     path('links/', views.LinksView, name='links'),
+    path("feed", blogFeed(), name ="feed"), 
 ]
