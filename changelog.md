@@ -1,3 +1,6 @@
+# 0.6
+- Add "Code" link to main menu
+
 # 0.5
 - RSS
 
