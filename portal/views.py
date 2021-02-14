@@ -6,7 +6,7 @@ from .forms import CommentForm
 class BlogView(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     context_object_name = 'posts'
-    paginate_by = 4
+    paginate_by = 20
     template_name = 'portal_blog_main.html'
 
 def ResourceView(request):

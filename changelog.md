@@ -1,3 +1,6 @@
+# 0.7
+- Add Github link
+
 # 0.6
 - Add "Code" link to main menu
 
