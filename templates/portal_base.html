@@ -19,11 +19,12 @@
             <div class="main-container">
                 <div class="parallax"></div>
                 <img class="header-image" src="{% static "portal_header.png" %}" />
-                <div class="rss"><a href="https://github.com/pleiadeslink" target="_blank"><img src="{% static "github.png" %}" /></a><a href="https://github.com/pleiadeslink/" target="_blank"><img src="{% static "mastodon.png" %}" /></a><a href="{% url 'feed' %}"><img src="{% static "rss.png" %}" /></a></div>
+                <div class="rss"><a href="https://github.com/pleiadeslink" target="_blank"><img src="{% static "github.png" %}" /></a><a href="https://deepnexus.link/@pleiades" target="_blank"><img src="{% static "mastodon.png" %}" /></a><a href="{% url 'feed' %}"><img src="{% static "rss.png" %}" /></a></div>
                 <div class="main-title">pleiades.link</div>
                 <ul class="nav">
                     <li><a href="{% url 'blog' %}">Blog</a></li>
                     <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'resources' %}">Resources</a></li>
                 </ul>
                 {% block content %} 
                 <!-- Content Goes here -->

@@ -1,3 +1,6 @@
+# 0.8
+- Minor fixes
+
 # 0.7
 - Add Github link
 
