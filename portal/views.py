@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from .models import Post, Resource, Category
 from .forms import CommentForm
+import socket
 
 class BlogView(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by('-created_on')
@@ -11,6 +12,9 @@ class BlogView(generic.ListView):
 
 def ResourceView(request):
     resources = Resource.objects.all().order_by('slug')
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    doom_status = sock.connect_ex(('127.0.0.1',10666))
+    sock.close()
     return render(request, "portal_resources.html", {'resources': resources})
 
 def PostView(request, slug):
